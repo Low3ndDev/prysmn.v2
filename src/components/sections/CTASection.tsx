@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button'
 
 export default function CTASection() {
   return (
-    <section id="cta" className="relative bg-prysmn-950 py-20 sm:py-28 overflow-hidden">
+    <section id="cta" aria-labelledby="cta-heading" className="relative bg-prysmn-950 py-20 sm:py-28 overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-prysmn-600/15 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-prysmn-500/10 rounded-full blur-3xl" />
       </div>
@@ -34,7 +34,7 @@ export default function CTASection() {
               Limited Availability
             </span>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+            <h2 id="cta-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
               Ready to Stop Losing{' '}
               <span className="bg-gradient-to-r from-prysmn-400 via-prysmn-300 to-prysmn-400 bg-clip-text text-transparent">
                 $700/Week?

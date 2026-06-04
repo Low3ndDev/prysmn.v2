@@ -32,7 +32,7 @@ const reasons = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative bg-prysmn-950 py-20 sm:py-28">
+    <section id="about" aria-labelledby="about-heading" className="relative bg-prysmn-950 py-20 sm:py-28">
       {/* Top border glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-500/50 to-transparent" />
 
@@ -48,7 +48,7 @@ export default function AboutSection() {
             <span className="inline-block px-3 py-1 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 text-prysmn-300 text-sm font-medium mb-4">
               Why Prysmn
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+            <h2 id="about-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
               We Don&apos;t Just Sell Software.{' '}
               <span className="bg-gradient-to-r from-prysmn-400 to-prysmn-300 bg-clip-text text-transparent">
                 We Deliver Results.

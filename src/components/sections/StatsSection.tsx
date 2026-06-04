@@ -1,26 +1,33 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef, useEffect, useState } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { useRef, useEffect, useState, useCallback } from 'react'
 import { DollarSign, PhoneOff, Star, Users } from 'lucide-react'
 
 function AnimatedCounter({ end, prefix = '', suffix = '', duration = 2 }: { end: number; prefix?: string; suffix?: string; duration?: number }) {
   const [count, setCount] = useState(0)
-  const ref = useRef(null)
+  const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   useEffect(() => {
     if (!isInView) return
     let startTime: number | null = null
+    let animationId: number
+
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / (duration * 1000), 1)
       const eased = 1 - Math.pow(1 - progress, 3)
       setCount(Math.floor(eased * end))
-      if (progress < 1) requestAnimationFrame(animate)
+      if (progress < 1) {
+        animationId = requestAnimationFrame(animate)
+      }
     }
-    requestAnimationFrame(animate)
+    animationId = requestAnimationFrame(animate)
+
+    return () => {
+      cancelAnimationFrame(animationId)
+    }
   }, [isInView, end, duration])
 
   return (
@@ -83,7 +90,7 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section id="stats" className="relative bg-prysmn-950 py-20 sm:py-28">
+    <section id="stats" aria-labelledby="stats-heading" className="relative bg-prysmn-950 py-20 sm:py-28">
       {/* Subtle top border glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-500/50 to-transparent" />
 
@@ -99,7 +106,7 @@ export default function StatsSection() {
           <span className="inline-block px-3 py-1 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 text-prysmn-300 text-sm font-medium mb-4">
             The Numbers Don&apos;t Lie
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 id="stats-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Your Business Is{' '}
             <span className="bg-gradient-to-r from-prysmn-400 to-prysmn-300 bg-clip-text text-transparent">
               Bleeding Revenue

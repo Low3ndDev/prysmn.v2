@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { PhoneCall, Star, Kanban, CalendarCheck, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 const services = [
   {
@@ -69,7 +68,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative bg-prysmn-900/30 py-20 sm:py-28">
+    <section id="services" aria-labelledby="services-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, rgba(199,125,255,0.5) 1px, transparent 0)`,
@@ -88,7 +87,7 @@ export default function ServicesSection() {
           <span className="inline-block px-3 py-1 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 text-prysmn-300 text-sm font-medium mb-4">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Everything You Need to{' '}
             <span className="bg-gradient-to-r from-prysmn-400 to-prysmn-300 bg-clip-text text-transparent">
               Stop Losing Leads
@@ -125,7 +124,7 @@ export default function ServicesSection() {
               </p>
 
               {/* Feature list */}
-              <ul className="space-y-2">
+              <ul className="space-y-2" role="list">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2 text-sm text-prysmn-300/60">
                     <ArrowRight className={`w-4 h-4 ${service.iconColor} mt-0.5 shrink-0`} />

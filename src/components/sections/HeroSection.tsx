@@ -8,13 +8,14 @@ export default function HeroSection() {
   return (
     <section
       id="home"
+      aria-labelledby="hero-heading"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-prysmn-950"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0">
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-prysmn-700/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-prysmn-500/15 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute inset-0" aria-hidden="true">
+        {/* Static gradient orbs — no animation to avoid GPU paint storms */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-prysmn-700/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-prysmn-500/15 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-prysmn-600/10 rounded-full blur-3xl" />
         {/* Grid overlay */}
         <div
@@ -43,6 +44,7 @@ export default function HeroSection() {
 
           {/* Main Headline */}
           <motion.h1
+            id="hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
