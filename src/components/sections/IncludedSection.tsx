@@ -53,7 +53,7 @@ export default function IncludedSection() {
     <section id="services" aria-labelledby="services-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-[0.02]" aria-hidden="true" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(199,125,255,0.5) 1px, transparent 0)`,
+        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(176,53,53,0.5) 1px, transparent 0)`,
         backgroundSize: '40px 40px',
       }} />
 

@@ -47,3 +47,23 @@ Stage Summary:
 - All PDF-specified copy, stats, testimonials, FAQs, and CTAs applied
 - No GoHighLevel branding present
 - Clean lint, page renders with all sections
+---
+Task ID: 1
+Agent: Main
+Task: Switch color palette from purple to dark red/gray
+
+Work Log:
+- Read all 9 component files + globals.css to map full purple palette usage
+- Created coherent red scale from 5 user-provided colors (#1c1515, #700c0c, #5a0303, #727070, #615f5f)
+- Interpolated missing shades (950→100) for smooth gradients and readability
+- Added prysmn-gray and prysmn-gray-dark custom properties for the gray palette colors
+- Updated globals.css: prysmn color scale, oklch hues (300→22), scrollbar colors
+- Updated HeroSection.tsx: grid pattern rgba from purple to red
+- Updated IncludedSection.tsx: dot pattern rgba from purple to red
+- Verified build compiles successfully with zero errors
+
+Stage Summary:
+- Full palette swap complete: Purple → Dark Red/Gray
+- All Tailwind prysmn-* classes auto-inherit new colors via CSS custom properties
+- No component class name changes needed — only CSS variable values updated
+- Two hardcoded rgba values in components updated to match new red palette
