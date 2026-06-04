@@ -97,6 +97,11 @@ export default function SocialProofSection() {
           ))}
         </div>
 
+        {/* Footnote — calculation basis */}
+        <p className="text-center text-gray-400 text-xs mt-8">
+          Based on an average plumbing job value of $320 and 2–3 missed calls per week. Individual results vary.
+        </p>
+
         {/* Founding client CTA — honest scarcity */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

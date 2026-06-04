@@ -187,6 +187,73 @@ section[id] {
   background: #2563EB;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   Hero CSS Animations — JS-free fallback
+   Replaces Framer Motion initial={{ opacity: 0 }} on above-fold content.
+   CSS animations fire immediately from stylesheet — no blank page on slow 3G.
+   ═══════════════════════════════════════════════════════════ */
+@keyframes hero-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in-up-lg {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-animate {
+  opacity: 0; /* Hidden initially, CSS animation reveals it */
+  animation: hero-fade-in-up 0.6s ease-out both;
+}
+
+.hero-animate-lg {
+  opacity: 0;
+  animation: hero-fade-in-up-lg 0.7s ease-out both;
+}
+
+.hero-animate-fade {
+  opacity: 0;
+  animation: hero-fade-in 0.7s ease-out both;
+}
+
+.hero-delay-1 { animation-delay: 0.1s; }
+.hero-delay-2 { animation-delay: 0.2s; }
+.hero-delay-3 { animation-delay: 0.3s; }
+.hero-delay-4 { animation-delay: 0.4s; }
+.hero-delay-5 { animation-delay: 0.5s; }
+
+/* ═══════════════════════════════════════════════════════════
+   Below-fold Framer Motion safety net
+   If JS doesn't hydrate within 2s, force content visible.
+   Uses attribute selector on inline styles set by FM's initial state.
+   ═══════════════════════════════════════════════════════════ */
+@keyframes fm-visibility-fallback {
+  to { opacity: 1; transform: none; }
+}
+
+section:not(#home) [style*="opacity: 0"],
+section:not(#home) [style*="opacity:0"] {
+  animation: fm-visibility-fallback 0.01s 2s forwards;
+}
+
 /* Respect prefers-reduced-motion — disable transforms & transitions for vestibular safety */
 @media (prefers-reduced-motion: reduce) {
   *,
