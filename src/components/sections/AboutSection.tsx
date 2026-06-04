@@ -81,7 +81,7 @@ export default function AboutSection() {
                   </p>
                   <p>
                     I noticed something: most plumbers are incredible at their trade and terrible at
-                    never missing a lead — not because they don&apos;t care, but because they&apos;re
+                    capturing every lead — not because they don&apos;t care, but because they&apos;re
                     under a house when the phone rings. The big marketing agencies charge $5,000+ to
                     sort it out, take three months to deliver, and hand you a generic website that
                     doesn&apos;t actually fix the problem.
@@ -91,7 +91,7 @@ export default function AboutSection() {
                     booked job — automatically, in 15 seconds, without you touching a thing.
                   </p>
                   <p>
-                    I&apos;m currently taking on my first clients. If you want to be one of them,
+                    I&apos;m currently onboarding founding clients in Australia. If you want to be one of them,
                     you&apos;ll get my full attention and a system that&apos;s set up in 48 hours.
                   </p>
 

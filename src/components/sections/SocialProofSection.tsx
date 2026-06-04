@@ -26,7 +26,7 @@ const industryStats = [
     icon: Clock,
     value: '15s',
     label: 'auto-text response time — vs 4+ min voicemail',
-    source: null,
+    source: 'Automated SMS trigger response time',
     color: 'from-prysmn-emerald to-emerald-600',
     iconColor: 'text-prysmn-emerald',
     iconBg: 'bg-prysmn-emerald/10',
