@@ -60,20 +60,18 @@ export default function AboutSection() {
                 <p className="text-prysmn-600 font-medium text-sm mt-1">
                   Founder, Prysmn
                 </p>
-                <p className="text-gray-500 text-sm mt-1">
-                  Western Australia
-                </p>
+
               </div>
             </div>
 
             {/* Body copy */}
             <div className="space-y-5 text-prysmn-charcoal leading-relaxed">
               <p>
-                I build automation systems specifically for WA plumbing businesses — not agencies,
-                not retail, not &ldquo;all trades.&rdquo; Just plumbers in Western Australia.
+                I build automation systems specifically for Australian plumbing businesses — not agencies,
+                not retail, not &ldquo;all trades.&rdquo; Just plumbers.
               </p>
               <p>
-                I noticed something: most WA plumbers are incredible at their trade and terrible at
+                I noticed something: most plumbers are incredible at their trade and terrible at
                 never missing a lead — not because they don&apos;t care, but because they&apos;re
                 under a house when the phone rings. The big marketing agencies charge $5,000+ to
                 sort it out, take three months to deliver, and hand you a generic website that
@@ -84,7 +82,7 @@ export default function AboutSection() {
                 booked job — automatically, in 15 seconds, without you touching a thing.
               </p>
               <p>
-                I&apos;m currently taking on my first clients in WA. If you want to be one of them,
+                I&apos;m currently taking on my first clients. If you want to be one of them,
                 you&apos;ll get my full attention and a system that&apos;s set up in 48 hours.
               </p>
             </div>

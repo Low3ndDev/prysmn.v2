@@ -116,7 +116,7 @@ export default function HeroSection() {
               Currently onboarding founding clients — limited spots available.
             </p>
             <p className="text-prysmn-400/40 text-xs mt-2">
-              Built for Western Australian Plumbing Businesses
+              Built for Australian Plumbing Businesses
             </p>
           </motion.div>
         </div>
