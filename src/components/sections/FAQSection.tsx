@@ -39,15 +39,15 @@ const faqs = [
 
 function FAQItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className="border border-prysmn-700/20 rounded-xl overflow-hidden hover:border-prysmn-600/30 transition-colors">
+    <div className="border border-gray-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors bg-white">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between p-5 sm:p-6 text-left gap-4"
         aria-expanded={isOpen}
       >
-        <span className="text-white font-semibold text-base sm:text-lg">{faq.question}</span>
+        <span className="text-prysmn-charcoal font-semibold text-base sm:text-lg">{faq.question}</span>
         <ChevronDown
-          className={`w-5 h-5 text-prysmn-400 shrink-0 transition-transform duration-300 ${
+          className={`w-5 h-5 text-prysmn-amber shrink-0 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -60,7 +60,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boole
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
-            <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-prysmn-300/70 leading-relaxed text-sm sm:text-base">
+            <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-gray-600 leading-relaxed text-sm sm:text-base">
               {faq.answer}
             </div>
           </motion.div>
@@ -74,9 +74,9 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
-      {/* Top border glow — Trust Zone (Blue) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-600/50 to-transparent" />
+    <section id="faq" aria-labelledby="faq-heading" className="relative bg-prysmn-snow py-20 sm:py-28">
+      {/* Top border glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-amber/30 to-transparent" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -87,13 +87,13 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 text-prysmn-300 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-white border border-amber-200 text-amber-600 text-sm font-medium mb-4">
             FAQ
           </span>
-          <h2 id="faq-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-prysmn-charcoal tracking-tight">
             Common Questions
           </h2>
-          <p className="mt-4 text-prysmn-300/60 text-base max-w-xl mx-auto">
+          <p className="mt-4 text-gray-500 text-base max-w-xl mx-auto">
             Straight answers to the questions plumbers ask most.
           </p>
         </motion.div>

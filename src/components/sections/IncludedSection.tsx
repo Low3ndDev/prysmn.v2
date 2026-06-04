@@ -10,8 +10,9 @@ const services = [
     description:
       'Auto-text within 15 seconds of any missed call. Converts 85% of missed callers into conversations. Recovers an average of $14,560 per year in previously lost revenue.',
     gradient: 'from-prysmn-600 to-prysmn-800',
-    iconBg: 'bg-prysmn-600/20',
+    iconBg: 'bg-prysmn-600/10',
     iconColor: 'text-prysmn-600',
+    borderColor: 'border-prysmn-200 hover:border-prysmn-300',
   },
   {
     icon: Star,
@@ -19,8 +20,9 @@ const services = [
     description:
       'Automatically requests a Google review after every completed job. Builds your online reputation on autopilot. Businesses with 4.5+ stars get 35% more clicks from Google searches.',
     gradient: 'from-amber-500 to-orange-600',
-    iconBg: 'bg-amber-600/20',
-    iconColor: 'text-amber-400',
+    iconBg: 'bg-amber-500/10',
+    iconColor: 'text-amber-500',
+    borderColor: 'border-amber-200 hover:border-amber-300',
   },
   {
     icon: Kanban,
@@ -28,8 +30,9 @@ const services = [
     description:
       'Track every lead, quote, and job in one simple dashboard. Never lose track of a pending quote again. Automatic follow-up reminders ensure no opportunity falls through the cracks.',
     gradient: 'from-prysmn-emerald to-teal-600',
-    iconBg: 'bg-prysmn-emerald/20',
+    iconBg: 'bg-prysmn-emerald/10',
     iconColor: 'text-prysmn-emerald',
+    borderColor: 'border-emerald-200 hover:border-emerald-300',
   },
   {
     icon: CalendarCheck,
@@ -37,8 +40,9 @@ const services = [
     description:
       "Let customers book appointments 24/7 from your website or Google profile. Captures after-hours leads that would otherwise go to voicemail. Syncs with your phone calendar automatically.",
     gradient: 'from-sky-500 to-blue-600',
-    iconBg: 'bg-sky-600/20',
-    iconColor: 'text-sky-400',
+    iconBg: 'bg-sky-500/10',
+    iconColor: 'text-sky-500',
+    borderColor: 'border-sky-200 hover:border-sky-300',
   },
 ]
 
@@ -50,14 +54,8 @@ const trustPoints = [
 
 export default function IncludedSection() {
   return (
-    <section id="services" aria-labelledby="services-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
-      {/* Background texture — Blue grid */}
-      <div className="absolute inset-0 opacity-[0.02]" aria-hidden="true" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(37,99,235,0.5) 1px, transparent 0)`,
-        backgroundSize: '40px 40px',
-      }} />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" aria-labelledby="services-heading" className="relative bg-prysmn-snow py-20 sm:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,15 +64,15 @@ export default function IncludedSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 text-prysmn-300 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-white border border-prysmn-200 text-prysmn-600 text-sm font-medium mb-4">
             What&apos;s Included
           </span>
-          <h2 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-prysmn-charcoal tracking-tight">
             The Plumber&apos;s Lifeline Package
           </h2>
-          <p className="mt-4 text-prysmn-300/70 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
             Everything you need to stop losing jobs — for just{' '}
-            <span className="text-white font-semibold">$497/month</span>
+            <span className="text-prysmn-orange font-semibold">$497/month</span>
           </p>
         </motion.div>
 
@@ -87,7 +85,7 @@ export default function IncludedSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-6 sm:p-8 rounded-2xl bg-prysmn-950/60 border border-prysmn-700/30 backdrop-blur-sm hover:border-prysmn-600/50 transition-all duration-300"
+              className={`group relative p-6 sm:p-8 rounded-2xl bg-white border ${service.borderColor} shadow-sm hover:shadow-md transition-all duration-300`}
             >
               {/* Icon */}
               <div className={`w-14 h-14 rounded-xl ${service.iconBg} flex items-center justify-center mb-5`}>
@@ -95,10 +93,10 @@ export default function IncludedSection() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-prysmn-charcoal mb-3">
                 {service.title}
               </h3>
-              <p className="text-prysmn-300/70 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {service.description}
               </p>
 
@@ -108,7 +106,7 @@ export default function IncludedSection() {
           ))}
         </div>
 
-        {/* Pricing summary — Revenue in EMERALD (Rule: Emerald = money recovered) */}
+        {/* Pricing summary — Orange price, Emerald revenue */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,21 +114,21 @@ export default function IncludedSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 p-6 rounded-2xl bg-prysmn-800/20 border border-prysmn-700/20">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
             <div>
-              <p className="text-prysmn-400/50 text-sm">Your investment</p>
-              <p className="text-white font-bold text-2xl">$497<span className="text-prysmn-400/60 text-base font-normal">/mo</span></p>
+              <p className="text-gray-500 text-sm">Your investment</p>
+              <p className="text-prysmn-orange font-bold text-2xl">$497<span className="text-gray-400 text-base font-normal">/mo</span></p>
             </div>
-            <div className="hidden sm:block w-px h-10 bg-prysmn-700/30" />
+            <div className="hidden sm:block w-px h-10 bg-gray-200" />
             <div>
-              <p className="text-prysmn-400/50 text-sm">Your return</p>
-              <p className="text-prysmn-emerald font-bold text-2xl">$58,240<span className="text-prysmn-400/60 text-base font-normal">/yr in recovered revenue</span></p>
+              <p className="text-gray-500 text-sm">Your return</p>
+              <p className="text-prysmn-emerald font-bold text-2xl">$58,240<span className="text-gray-400 text-base font-normal">/yr in recovered revenue</span></p>
             </div>
           </div>
-          <div className="mt-4 flex items-center justify-center gap-4 text-sm text-prysmn-400/50">
+          <div className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-500">
             {trustPoints.map((point) => (
               <span key={point} className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-prysmn-emerald/60" />
+                <CheckCircle2 className="w-4 h-4 text-prysmn-emerald" />
                 {point}
               </span>
             ))}

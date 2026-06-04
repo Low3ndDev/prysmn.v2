@@ -21,17 +21,17 @@ const testimonials = [
 ]
 
 const industryStats = [
-  { value: '85%', label: 'of missed callers respond to the auto-text', color: 'from-prysmn-400 to-prysmn-300' },
-  { value: '72%', label: 'of text-back conversations convert to booked jobs', color: 'from-prysmn-400 to-prysmn-300' },
-  { value: '$14,560', label: 'average revenue recovery per year', color: 'from-prysmn-emerald to-emerald-400' },
-  { value: '+0.7', label: 'stars improvement within 60 days', color: 'from-prysmn-amber to-amber-400' },
+  { value: '85%', label: 'of missed callers respond to the auto-text', color: 'from-prysmn-600 to-prysmn-500' },
+  { value: '72%', label: 'of text-back conversations convert to booked jobs', color: 'from-prysmn-600 to-prysmn-500' },
+  { value: '$14,560', label: 'average revenue recovery per year', color: 'from-prysmn-emerald to-emerald-600' },
+  { value: '+0.7', label: 'stars improvement within 60 days', color: 'from-prysmn-amber to-amber-500' },
 ]
 
 export default function SocialProofSection() {
   return (
-    <section id="proof" aria-labelledby="proof-heading" className="relative bg-prysmn-950 py-20 sm:py-28">
-      {/* Top border glow — Trust Zone (Blue) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-600/50 to-transparent" />
+    <section id="proof" aria-labelledby="proof-heading" className="relative bg-prysmn-cream py-20 sm:py-28">
+      {/* Top border glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -42,12 +42,12 @@ export default function SocialProofSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 text-prysmn-300 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-white border border-amber-200 text-amber-600 text-sm font-medium mb-4">
             Social Proof
           </span>
-          <h2 id="proof-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 id="proof-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-prysmn-charcoal tracking-tight">
             Real Results from{' '}
-            <span className="bg-gradient-to-r from-prysmn-400 to-prysmn-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-prysmn-600 to-prysmn-500 bg-clip-text text-transparent">
               Real Plumbers
             </span>
           </h2>
@@ -62,12 +62,12 @@ export default function SocialProofSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-6 sm:p-8 rounded-2xl bg-prysmn-900/40 border border-prysmn-700/20 backdrop-blur-sm"
+              className="relative p-6 sm:p-8 rounded-2xl bg-white border border-amber-100 shadow-sm"
             >
               {/* Quote icon */}
-              <Quote className="w-10 h-10 text-prysmn-700/30 mb-4" />
+              <Quote className="w-10 h-10 text-amber-200 mb-4" />
 
-              <blockquote className="text-prysmn-200/90 leading-relaxed text-base sm:text-lg">
+              <blockquote className="text-prysmn-charcoal leading-relaxed text-base sm:text-lg">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
@@ -76,8 +76,8 @@ export default function SocialProofSection() {
                   <span className="text-white text-xs font-bold">{testimonial.initials}</span>
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-prysmn-400/50 text-xs">{testimonial.role}</p>
+                  <p className="text-prysmn-charcoal font-semibold text-sm">{testimonial.name}</p>
+                  <p className="text-gray-500 text-xs">{testimonial.role}</p>
                 </div>
               </div>
 
@@ -91,14 +91,14 @@ export default function SocialProofSection() {
           ))}
         </div>
 
-        {/* Industry Average Results — Color-coded by meaning */}
+        {/* Industry Average Results */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-center text-white font-semibold text-lg mb-8">Industry Average Results</h3>
+          <h3 className="text-center text-prysmn-charcoal font-semibold text-lg mb-8">Industry Average Results</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {industryStats.map((stat, index) => (
               <motion.div
@@ -107,12 +107,12 @@ export default function SocialProofSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="text-center p-4 rounded-xl bg-prysmn-900/30 border border-prysmn-700/15"
+                className="text-center p-4 rounded-xl bg-white/70 border border-amber-100"
               >
                 <p className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                   {stat.value}
                 </p>
-                <p className="text-prysmn-300/50 text-xs sm:text-sm mt-1">{stat.label}</p>
+                <p className="text-gray-500 text-xs sm:text-sm mt-1">{stat.label}</p>
               </motion.div>
             ))}
           </div>
