@@ -105,28 +105,19 @@ export default function HeroSection() {
             No contracts. No setup fees. See results in 48 hours.
           </motion.p>
 
-          {/* Trust bar */}
+          {/* Founding clients bar — honest scarcity */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-12 pt-8 border-t border-prysmn-800/30"
           >
-            <p className="text-prysmn-400/40 text-xs uppercase tracking-widest mb-4">
-              Trusted by 50+ Plumbing Businesses
+            <p className="text-prysmn-400/60 text-sm font-medium">
+              Currently onboarding founding clients — limited spots available.
             </p>
-            <div className="flex items-center justify-center gap-6 sm:gap-10 flex-wrap">
-              {[
-                { value: '15s', label: 'Auto-text speed' },
-                { value: '85%', label: 'Response rate' },
-                { value: '$14.5k', label: 'Avg. revenue recovered/yr' },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <p className="text-white font-bold text-xl sm:text-2xl">{stat.value}</p>
-                  <p className="text-prysmn-400/40 text-xs mt-0.5">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+            <p className="text-prysmn-400/40 text-xs mt-2">
+              Built for Western Australian Plumbing Businesses
+            </p>
           </motion.div>
         </div>
       </div>

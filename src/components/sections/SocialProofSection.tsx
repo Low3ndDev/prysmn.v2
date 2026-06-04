@@ -1,30 +1,45 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
-
-const testimonials = [
-  {
-    quote:
-      "I was losing at least 5 calls a day while on job sites. Within the first week of Missed Call Text-Back, I booked 8 extra jobs just from people who would have gone elsewhere. That's over $2,500 in a single week from something that runs on autopilot.",
-    name: 'Mike T.',
-    role: 'Plumber, Sydney NSW',
-    initials: 'MT',
-  },
-  {
-    quote:
-      "The review automation alone got me from 3.9 to 4.6 stars in two months. I'm now the top-rated plumber in my area on Google, and the calls just keep coming.",
-    name: 'Dave R.',
-    role: 'Plumber, Brisbane QLD',
-    initials: 'DR',
-  },
-]
+import { Shield, TrendingUp, Clock, Users, PhoneOff } from 'lucide-react'
 
 const industryStats = [
-  { value: '85%', label: 'of missed callers respond to the auto-text', color: 'from-prysmn-600 to-prysmn-500' },
-  { value: '72%', label: 'of text-back conversations convert to booked jobs', color: 'from-prysmn-600 to-prysmn-500' },
-  { value: '$14,560', label: 'average revenue recovery per year', color: 'from-prysmn-emerald to-emerald-600' },
-  { value: '+0.7', label: 'stars improvement within 60 days', color: 'from-prysmn-amber to-amber-500' },
+  {
+    icon: PhoneOff,
+    value: '62%',
+    label: 'of missed callers never call back',
+    source: 'Forbes',
+    color: 'from-red-500 to-rose-600',
+    iconColor: 'text-red-500',
+    iconBg: 'bg-red-50',
+  },
+  {
+    icon: TrendingUp,
+    value: '93%',
+    label: 'of texts are read within 3 minutes',
+    source: 'SMS Comparison',
+    color: 'from-prysmn-600 to-prysmn-500',
+    iconColor: 'text-prysmn-600',
+    iconBg: 'bg-prysmn-600/10',
+  },
+  {
+    icon: Clock,
+    value: '15s',
+    label: 'auto-text response time — vs 4+ min voicemail',
+    source: null,
+    color: 'from-prysmn-emerald to-emerald-600',
+    iconColor: 'text-prysmn-emerald',
+    iconBg: 'bg-prysmn-emerald/10',
+  },
+  {
+    icon: Users,
+    value: '85%',
+    label: 'of consumers prefer texting over calling',
+    source: 'Zipwhip',
+    color: 'from-prysmn-amber to-amber-500',
+    iconColor: 'text-amber-500',
+    iconBg: 'bg-amber-500/10',
+  },
 ]
 
 export default function SocialProofSection() {
@@ -43,74 +58,65 @@ export default function SocialProofSection() {
           className="text-center mb-16"
         >
           <span className="inline-block px-3 py-1 rounded-full bg-white border border-amber-200 text-amber-600 text-sm font-medium mb-4">
-            Social Proof
+            The Industry
           </span>
           <h2 id="proof-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-prysmn-charcoal tracking-tight">
-            Real Results from{' '}
+            The Data Behind{' '}
             <span className="bg-gradient-to-r from-prysmn-600 to-prysmn-500 bg-clip-text text-transparent">
-              Real Plumbers
+              Missed Call Recovery
             </span>
           </h2>
+          <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            These aren&apos;t guesses — they&apos;re industry research. The opportunity cost of
+            ignoring missed calls is staggering.
+          </p>
         </motion.div>
 
-        {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
+        {/* Industry Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {industryStats.map((stat, index) => (
             <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 30 }}
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-6 sm:p-8 rounded-2xl bg-white border border-amber-100 shadow-sm"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="relative p-6 rounded-2xl bg-white border border-amber-100 shadow-sm text-center"
             >
-              {/* Star rating — at top for immediate credibility signal */}
-              <div className="flex gap-0.5 mb-4" aria-label="5 out of 5 stars">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-prysmn-amber text-prysmn-amber" aria-hidden="true" />
-                ))}
+              <div className={`w-12 h-12 rounded-xl ${stat.iconBg} flex items-center justify-center mb-4 mx-auto`}>
+                <stat.icon className={`w-6 h-6 ${stat.iconColor}`} />
               </div>
-
-              <blockquote className="text-prysmn-charcoal leading-relaxed text-base sm:text-lg">
-                &ldquo;{testimonial.quote}&rdquo;
-                <footer className="mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-prysmn-600 to-prysmn-800 flex items-center justify-center shrink-0">
-                    <span className="text-white text-xs font-bold">{testimonial.initials}</span>
-                  </div>
-                  <div>
-                    <cite className="not-italic text-prysmn-charcoal font-semibold text-sm">{testimonial.name}</cite>
-                    <p className="text-gray-500 text-xs">{testimonial.role}</p>
-                  </div>
-                </footer>
-              </blockquote>
+              <p className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                {stat.value}
+              </p>
+              <p className="text-prysmn-charcoal font-medium text-sm mt-2">{stat.label}</p>
+              {stat.source && (
+                <p className="text-gray-400 text-xs mt-1">Source: {stat.source}</p>
+              )}
             </motion.div>
           ))}
         </div>
 
-        {/* Industry Average Results */}
+        {/* Founding client CTA — honest scarcity */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 text-center"
         >
-          <h3 className="text-center text-prysmn-charcoal font-semibold text-lg mb-8">Industry Average Results</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {industryStats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="text-center p-4 rounded-xl bg-white/70 border border-amber-100"
-              >
-                <p className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                  {stat.value}
-                </p>
-                <p className="text-gray-500 text-xs sm:text-sm mt-1">{stat.label}</p>
-              </motion.div>
-            ))}
+          <div className="inline-flex flex-col items-center gap-3 p-6 rounded-2xl bg-white border border-amber-200 shadow-sm max-w-lg">
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-prysmn-emerald" />
+              <span className="text-prysmn-charcoal font-semibold text-sm">Founding Client Program</span>
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              We&apos;re currently onboarding our first group of Australian plumbing businesses.
+              Founding clients get priority setup, direct access to our team, and locked-in pricing.
+            </p>
+            <p className="text-prysmn-orange font-semibold text-sm">
+              Limited spots remaining.
+            </p>
           </div>
         </motion.div>
       </div>

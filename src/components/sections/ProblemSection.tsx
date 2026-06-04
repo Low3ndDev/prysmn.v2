@@ -5,9 +5,13 @@ import { useRef, useEffect, useState } from 'react'
 import { PhoneOff, DollarSign, Users } from 'lucide-react'
 
 function AnimatedCounter({ end, prefix = '', suffix = '', duration = 2, decimals = 0 }: { end: number; prefix?: string; suffix?: string; duration?: number; decimals?: number }) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number | null>(null)
   const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+
+  // Format helper — used for both final value and animated value
+  const format = (n: number) =>
+    n.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
 
   useEffect(() => {
     if (!isInView) return
@@ -28,9 +32,12 @@ function AnimatedCounter({ end, prefix = '', suffix = '', duration = 2, decimals
     return () => cancelAnimationFrame(animationId)
   }, [isInView, end, duration, decimals])
 
+  // Before animation starts, show the final value (no zero flash)
+  const display = count === null ? format(end) : format(count)
+
   return (
     <span ref={ref}>
-      {prefix}{count.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}{suffix}
+      {prefix}{display}{suffix}
     </span>
   )
 }
