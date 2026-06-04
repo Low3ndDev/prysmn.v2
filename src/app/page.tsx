@@ -2,9 +2,11 @@
 
 import Header from '@/components/sections/Header'
 import HeroSection from '@/components/sections/HeroSection'
-import StatsSection from '@/components/sections/StatsSection'
-import ServicesSection from '@/components/sections/ServicesSection'
-import AboutSection from '@/components/sections/AboutSection'
+import ProblemSection from '@/components/sections/ProblemSection'
+import SolutionSection from '@/components/sections/SolutionSection'
+import IncludedSection from '@/components/sections/IncludedSection'
+import SocialProofSection from '@/components/sections/SocialProofSection'
+import FAQSection from '@/components/sections/FAQSection'
 import CTASection from '@/components/sections/CTASection'
 import Footer from '@/components/sections/Footer'
 
@@ -14,9 +16,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <StatsSection />
-        <ServicesSection />
-        <AboutSection />
+        <ProblemSection />
+        <SolutionSection />
+        <IncludedSection />
+        <SocialProofSection />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />

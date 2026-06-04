@@ -30,21 +30,18 @@ export default function CTASection() {
             <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-prysmn-500/30 rounded-tl-3xl" />
             <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-prysmn-500/30 rounded-br-3xl" />
 
-            <span className="inline-block px-3 py-1 rounded-full bg-prysmn-500/20 border border-prysmn-500/30 text-prysmn-300 text-sm font-medium mb-6">
-              Limited Availability
-            </span>
-
             <h2 id="cta-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-              Ready to Stop Losing{' '}
+              Stop Losing{' '}
               <span className="bg-gradient-to-r from-prysmn-400 via-prysmn-300 to-prysmn-400 bg-clip-text text-transparent">
-                $700/Week?
-              </span>
+                $700/Week.
+              </span>{' '}
+              Start Recovering It Today.
             </h2>
 
             <p className="mt-6 text-prysmn-300/80 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
-              Book a free 15-minute strategy call. We&apos;ll show you exactly how much
-              revenue you&apos;re losing from missed calls — and how to get it back.
-              No pressure, no commitment.
+              Book a free 15-minute call. We&apos;ll show you exactly how many calls
+              you&apos;re missing and have the text-back system running within 48 hours.
+              No contracts. No risk. Just results.
             </p>
 
             {/* CTA Buttons */}
@@ -56,25 +53,33 @@ export default function CTASection() {
               >
                 <a href="tel:+1234567890">
                   <Phone className="w-5 h-5 mr-2" />
-                  Book Your Free Call
+                  Book Your Free 15-Minute Call
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
             </div>
 
+            {/* Direct phone line */}
+            <p className="mt-6 text-prysmn-400/50 text-sm">
+              Or call us directly:{' '}
+              <a href="tel:+1234567890" className="text-prysmn-300 hover:text-white transition-colors underline underline-offset-2">
+                (123) 456-7890
+              </a>
+            </p>
+
             {/* Trust line */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-prysmn-400/50">
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                Free strategy session
+                Free 15-minute strategy session
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                No credit card required
+                No contracts, cancel anytime
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                Setup in 48 hours
+                Running within 48 hours
               </span>
             </div>
           </div>

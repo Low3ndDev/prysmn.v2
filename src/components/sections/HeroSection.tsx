@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Phone, MessageSquare, TrendingDown } from 'lucide-react'
+import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function HeroSection() {
@@ -13,11 +13,9 @@ export default function HeroSection() {
     >
       {/* Background Effects */}
       <div className="absolute inset-0" aria-hidden="true">
-        {/* Static gradient orbs — no animation to avoid GPU paint storms */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-prysmn-700/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-prysmn-500/15 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-prysmn-600/10 rounded-full blur-3xl" />
-        {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -57,16 +55,15 @@ export default function HeroSection() {
             to Missed Calls
           </motion.h1>
 
-          {/* Sub-headline */}
+          {/* Sub-headline — from PDF copy */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-prysmn-300/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Every missed call is a lost customer. Prysmn automates your follow-up,
-            captures leads while you&apos;re on the job, and keeps your schedule full
-            — so you never lose revenue again.
+            The automated text-back system that turns your missed calls into booked jobs
+            — in under 15 seconds.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -82,7 +79,7 @@ export default function HeroSection() {
               className="bg-gradient-to-r from-prysmn-500 to-prysmn-600 hover:from-prysmn-400 hover:to-prysmn-500 text-white text-lg px-8 py-6 shadow-xl shadow-prysmn-600/25 hover:shadow-prysmn-500/40 transition-all"
             >
               <a href="#cta">
-                Get Started Free
+                Book Your Free Call
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </Button>
@@ -92,34 +89,44 @@ export default function HeroSection() {
               variant="outline"
               className="border-prysmn-600/50 text-prysmn-300 hover:bg-prysmn-800/30 hover:text-white hover:border-prysmn-500/50 text-lg px-8 py-6"
             >
-              <a href="#services">
+              <a href="#solution">
                 See How It Works
               </a>
             </Button>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* No-contract trust line */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-4 text-sm text-prysmn-400/50"
+          >
+            No contracts. No setup fees. See results in 48 hours.
+          </motion.p>
+
+          {/* Trust bar — from PDF: "Trusted by 47+ Australian Plumbing Businesses" */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto"
+            className="mt-12 pt-8 border-t border-prysmn-800/30"
           >
-            {[
-              { icon: Phone, label: 'Auto Text-Back', desc: 'Never miss a lead' },
-              { icon: MessageSquare, label: 'Review Automation', desc: '5x more reviews' },
-              { icon: TrendingDown, label: 'Reduce Loss', desc: 'Save $700+/week' },
-            ].map((item) => (
-              <div key={item.label} className="flex items-center gap-3 justify-center sm:justify-start">
-                <div className="w-10 h-10 rounded-lg bg-prysmn-800/50 border border-prysmn-600/20 flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-prysmn-400" />
+            <p className="text-prysmn-400/40 text-xs uppercase tracking-widest mb-4">
+              Trusted by 50+ Plumbing Businesses
+            </p>
+            <div className="flex items-center justify-center gap-6 sm:gap-10 flex-wrap">
+              {[
+                { value: '15s', label: 'Auto-text speed' },
+                { value: '85%', label: 'Response rate' },
+                { value: '$14.5k', label: 'Avg. revenue recovered/yr' },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <p className="text-white font-bold text-xl sm:text-2xl">{stat.value}</p>
+                  <p className="text-prysmn-400/40 text-xs mt-0.5">{stat.label}</p>
                 </div>
-                <div className="text-left">
-                  <p className="text-white text-sm font-semibold">{item.label}</p>
-                  <p className="text-prysmn-400/60 text-xs">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

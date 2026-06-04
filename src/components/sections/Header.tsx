@@ -7,10 +7,11 @@ import { Button } from '@/components/ui/button'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'Results', href: '#stats' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#cta' },
+  { label: 'The Problem', href: '#problem' },
+  { label: 'Solution', href: '#solution' },
+  { label: 'Included', href: '#services' },
+  { label: 'Proof', href: '#proof' },
+  { label: 'FAQ', href: '#faq' },
 ]
 
 export default function Header() {
@@ -49,12 +50,10 @@ export default function Header() {
     if (!isMobileOpen) return
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement
-      // Only close if clicking outside the header entirely
       if (!target.closest('header')) {
         setIsMobileOpen(false)
       }
     }
-    // Delay to avoid the same click that opened the menu
     const timer = setTimeout(() => {
       document.addEventListener('click', handleClickOutside)
     }, 0)
@@ -102,12 +101,12 @@ export default function Header() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm text-prysmn-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                className="px-3 py-2 text-sm text-prysmn-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
               >
                 {link.label}
               </a>

@@ -4,15 +4,16 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 
 const footerLinks = {
   services: [
-    { label: 'Missed Call Text Back', href: '#services' },
+    { label: 'Missed Call Text-Back', href: '#services' },
     { label: 'Google Review Automation', href: '#services' },
     { label: 'CRM Pipeline', href: '#services' },
-    { label: 'Online Booking', href: '#services' },
+    { label: 'Online Booking Calendar', href: '#services' },
   ],
   company: [
-    { label: 'About', href: '#about' },
-    { label: 'Results', href: '#stats' },
-    { label: 'Contact', href: '#cta' },
+    { label: 'The Problem', href: '#problem' },
+    { label: 'Solution', href: '#solution' },
+    { label: 'Proof', href: '#proof' },
+    { label: 'FAQ', href: '#faq' },
   ],
 }
 
@@ -30,7 +31,7 @@ export default function Footer() {
               <span className="text-white font-bold text-xl tracking-tight">Prysmn</span>
             </a>
             <p className="text-prysmn-400/50 text-sm leading-relaxed max-w-xs">
-              Automated lead capture and follow-up solutions built exclusively for plumbing businesses.
+              The Plumber&apos;s Lifeline Package — automated lead capture and follow-up built exclusively for plumbing businesses.
             </p>
             <div className="mt-4 flex items-center gap-4">
               <a href="mailto:hello@prysmn.com" className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Email">
@@ -65,7 +66,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Company</h3>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Explore</h3>
             <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -84,7 +85,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Get Started</h3>
             <p className="text-prysmn-400/50 text-sm mb-4">
-              Stop losing leads today. Book a free call and we&apos;ll show you how.
+              Stop losing leads today. Book a free 15-minute call.
             </p>
             <a
               href="#cta"
