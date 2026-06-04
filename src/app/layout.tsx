@@ -14,24 +14,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Prysmn — Stop Losing $700/Week to Missed Calls",
+  description:
+    "Automated missed call text-back, Google review automation, CRM pipeline, and online booking — built exclusively for plumbing businesses. Recover lost revenue on autopilot.",
+  keywords: [
+    "plumbing automation",
+    "missed call text back",
+    "plumber CRM",
+    "Google review automation",
+    "online booking for plumbers",
+    "lead capture",
+    "Prysmn",
+  ],
+  authors: [{ name: "Prysmn" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Prysmn — Stop Losing $700/Week to Missed Calls",
+    description:
+      "Automated missed call text-back, Google review automation, CRM pipeline, and online booking for plumbers.",
+    siteName: "Prysmn",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Prysmn — Stop Losing $700/Week to Missed Calls",
+    description:
+      "Automated missed call text-back, Google review automation, CRM pipeline, and online booking for plumbers.",
   },
 };
 
@@ -43,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-prysmn-950 text-foreground`}
       >
         {children}
         <Toaster />
