@@ -60,9 +60,11 @@ export default function TermsOfService() {
                   3. Pricing and Billing
                 </h2>
                 <p>
-                  Services are billed at AUD $897/month or AUD $2,497/year, depending on the plan
-                  selected. Payment is due at the start of each billing period. Pricing is locked in
-                  for founding clients at the rate agreed at signup.
+                  Services start at AUD $497/month. Upgrade packages are available and will be
+                  proposed separately after the initial service period. Pricing for any upgrade is
+                  confirmed in writing before changes take effect. Payment is due at the start of
+                  each billing period. Pricing is locked in for founding clients at the rate agreed
+                  at signup.
                 </p>
               </div>
 
