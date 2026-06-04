@@ -1,4 +1,4 @@
-import { Mail, MapPin, ArrowRight } from 'lucide-react'
+import { Mail, ArrowRight } from 'lucide-react'
 import { businessConfig } from '@/lib/business-config'
 
 const footerLinks = {
@@ -32,14 +32,10 @@ export default function Footer() {
             <p className="text-prysmn-400/50 text-sm leading-relaxed max-w-xs">
               The Plumber&apos;s Lifeline Package — automated lead capture and follow-up built exclusively for plumbing businesses.
             </p>
-            <div className="mt-4 flex items-center gap-4">
+            <div className="mt-4">
               <a href={`mailto:${businessConfig.email}`} className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Email">
                 <Mail className="w-5 h-5" />
               </a>
-              <span className="text-prysmn-400/50 flex items-center gap-1.5">
-                <MapPin className="w-5 h-5" />
-                <span className="text-xs">Australia</span>
-              </span>
             </div>
           </div>
 
