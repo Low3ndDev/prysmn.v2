@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, ArrowRight } from 'lucide-react'
 import { businessConfig } from '@/lib/business-config'
 
 const footerLinks = {
@@ -35,9 +35,6 @@ export default function Footer() {
             <div className="mt-4 flex items-center gap-4">
               <a href={`mailto:${businessConfig.email}`} className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Email">
                 <Mail className="w-5 h-5" />
-              </a>
-              <a href={businessConfig.phoneHref} className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Phone">
-                <Phone className="w-5 h-5" />
               </a>
               <span className="text-prysmn-400/50 flex items-center gap-1.5">
                 <MapPin className="w-5 h-5" />
@@ -84,15 +81,15 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Get Started</h3>
             <p className="text-prysmn-400/50 text-sm mb-4">
-              Stop losing leads today. Book a free 15-minute call.
+              Stop losing leads today. Book a free strategy session.
             </p>
             {/* CTA Button — ORANGE (Rule 1: CTAs = Orange) */}
             <a
               href="#cta"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-prysmn-orange hover:bg-prysmn-orange-hover text-white text-sm font-medium transition-all shadow-lg shadow-prysmn-orange/20"
             >
-              <Phone className="w-4 h-4" />
-              Book a Call
+              <ArrowRight className="w-4 h-4" />
+              Get Started
             </a>
           </div>
         </div>

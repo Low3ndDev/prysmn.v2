@@ -6,11 +6,8 @@
  */
 
 export const businessConfig = {
-  /** E.164 format for tel: links */
-  phoneHref: 'tel:+61400000000',
-
-  /** Human-readable display format */
-  phoneDisplay: '0400 000 000',
+  /** Booking page URL (Calendly, Cal.com, etc.) */
+  bookingUrl: '#cta',
 
   email: 'hello@prysmn.com',
 

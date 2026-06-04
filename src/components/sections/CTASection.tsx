@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { businessConfig } from '@/lib/business-config'
 
@@ -43,7 +43,7 @@ export default function CTASection() {
             </h2>
 
             <p className="mt-6 text-prysmn-300/80 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
-              Book a free 15-minute call. We&apos;ll show you exactly how many calls
+              Book a free 15-minute strategy session. We&apos;ll show you exactly how many calls
               you&apos;re missing and have the text-back system running within 48 hours.
               No contracts. No risk. Just results.
             </p>
@@ -55,21 +55,12 @@ export default function CTASection() {
                 size="lg"
                 className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white text-lg px-8 py-6 shadow-xl shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
               >
-                <a href={businessConfig.phoneHref}>
-                  <Phone className="w-5 h-5 mr-2" />
-                  Book Your Free 15-Minute Call
+                <a href={businessConfig.bookingUrl}>
+                  Book Your Free Strategy Session
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
             </div>
-
-            {/* Direct phone line */}
-            <p className="mt-6 text-prysmn-400/50 text-sm">
-              Or call us directly:{' '}
-              <a href={businessConfig.phoneHref} className="text-prysmn-300 hover:text-white transition-colors underline underline-offset-2">
-                {businessConfig.phoneDisplay}
-              </a>
-            </p>
 
             {/* Trust line — Emerald dots for success indicators */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-prysmn-400/50">

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const navLinks = [
@@ -136,8 +136,8 @@ export default function Header() {
               className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white shadow-lg shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
             >
               <a href="#cta">
-                <Phone className="w-4 h-4 mr-2" />
-                Book a Call
+                <ArrowRight className="w-4 h-4 mr-2" />
+                Get Started
               </a>
             </Button>
           </div>
@@ -186,8 +186,8 @@ export default function Header() {
                   className="w-full bg-prysmn-orange hover:bg-prysmn-orange-hover text-white"
                 >
                   <a href="#cta" onClick={closeMobile}>
-                    <Phone className="w-4 h-4 mr-2" />
-                    Book a Call
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    Get Started
                   </a>
                 </Button>
               </div>
