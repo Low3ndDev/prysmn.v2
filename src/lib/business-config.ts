@@ -6,8 +6,8 @@
  */
 
 export const businessConfig = {
-  /** Booking page URL (Calendly, Cal.com, etc.) */
-  bookingUrl: '#cta',
+  /** Booking page URL (GoHighLevel widget) */
+  bookingUrl: 'https://api.leadconnectorhq.com/widget/bookings/prysmn_free_audit',
 
   email: 'hello@prysmn.com',
 
