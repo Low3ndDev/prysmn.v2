@@ -52,7 +52,7 @@ const painStats = [
     suffix: '',
     label: 'lost to missed calls every year',
     description: "That's $700 a week walking straight to your competition.",
-    iconColor: 'text-amber-400',
+    iconColor: 'text-prysmn-amber',
     bgColor: 'bg-amber-500/10',
     gradient: 'from-amber-400 to-yellow-500',
   },
@@ -62,16 +62,16 @@ const painStats = [
     suffix: '.3',
     label: 'customers lost PER DAY to competitors',
     description: 'Competitors who simply answer the phone get your jobs.',
-    iconColor: 'text-prysmn-400',
-    bgColor: 'bg-prysmn-500/10',
-    gradient: 'from-prysmn-400 to-prysmn-500',
+    iconColor: 'text-red-400',
+    bgColor: 'bg-red-500/10',
+    gradient: 'from-red-400 to-red-500',
   },
 ]
 
 export default function ProblemSection() {
   return (
     <section id="problem" aria-labelledby="problem-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
-      {/* Subtle top border glow */}
+      {/* Subtle top border glow — RED zone (Problem section ONLY, Rule 2) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

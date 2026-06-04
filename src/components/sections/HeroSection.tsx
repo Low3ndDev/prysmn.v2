@@ -11,15 +11,15 @@ export default function HeroSection() {
       aria-labelledby="hero-heading"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-prysmn-950"
     >
-      {/* Background Effects */}
+      {/* Background Effects — Trust Zone (Blue) */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-prysmn-700/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-prysmn-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-prysmn-500/15 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-prysmn-600/10 rounded-full blur-3xl" />
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `linear-gradient(rgba(176,53,53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(176,53,53,0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(37,99,235,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.3) 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
         />
@@ -34,13 +34,13 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-prysmn-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-prysmn-orange animate-pulse" />
             <span className="text-prysmn-300 text-sm font-medium">
               Built for Plumbing Businesses
             </span>
           </motion.div>
 
-          {/* Main Headline */}
+          {/* Main Headline — $700/Week in Red (loss figure, Rule 2) */}
           <motion.h1
             id="hero-heading"
             initial={{ opacity: 0, y: 30 }}
@@ -49,13 +49,13 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight"
           >
             Stop Losing{' '}
-            <span className="bg-gradient-to-r from-prysmn-400 via-prysmn-300 to-prysmn-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 via-prysmn-amber to-red-400 bg-clip-text text-transparent">
               $700/Week
             </span>{' '}
             to Missed Calls
           </motion.h1>
 
-          {/* Sub-headline — from PDF copy */}
+          {/* Sub-headline */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function HeroSection() {
             — in under 15 seconds.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons — Primary CTA = ORANGE (Rule 1) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-prysmn-500 to-prysmn-600 hover:from-prysmn-400 hover:to-prysmn-500 text-white text-lg px-8 py-6 shadow-xl shadow-prysmn-600/25 hover:shadow-prysmn-500/40 transition-all"
+              className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white text-lg px-8 py-6 shadow-xl shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
             >
               <a href="#cta">
                 Book Your Free Call
@@ -105,7 +105,7 @@ export default function HeroSection() {
             No contracts. No setup fees. See results in 48 hours.
           </motion.p>
 
-          {/* Trust bar — from PDF: "Trusted by 47+ Australian Plumbing Businesses" */}
+          {/* Trust bar */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

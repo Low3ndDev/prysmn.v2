@@ -75,8 +75,8 @@ export default function FAQSection() {
 
   return (
     <section id="faq" aria-labelledby="faq-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
-      {/* Top border glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-500/50 to-transparent" />
+      {/* Top border glow — Trust Zone (Blue) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-600/50 to-transparent" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

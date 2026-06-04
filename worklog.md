@@ -67,3 +67,31 @@ Stage Summary:
 - All Tailwind prysmn-* classes auto-inherit new colors via CSS custom properties
 - No component class name changes needed — only CSS variable values updated
 - Two hardcoded rgba values in components updated to match new red palette
+
+---
+Task ID: 2
+Agent: Main
+Task: Switch color palette to Blue + Orange Trust-Urgency Framework
+
+Work Log:
+- Replaced entire globals.css color system with 10-color Blue+Orange palette
+- Created Navy Blue scale (prysmn-950→100) for 60% Trust Zone dominance
+- Added semantic tokens: prysmn-orange, prysmn-orange-hover, prysmn-amber, prysmn-red, prysmn-emerald, prysmn-charcoal, prysmn-snow, prysmn-ice, prysmn-cream
+- Shifted oklch hues from 22° (red) to 250° (blue) for all design system tokens
+- Updated all 9 component files with palette-appropriate color assignments
+- Applied Rule 1 (CTA=Orange) to Header, Hero, CTA, Footer buttons
+- Applied Rule 2 (Red=Problem only) to ProblemSection, kept $700/Week in red/amber as loss figure
+- Applied Rule 3 (60-30-10) via blue-dominant bg/borders, charcoal/ice neutrals, orange CTAs
+- Emerald used for money-recovered figures (IncludedSection, SocialProofSection)
+- Amber used for star ratings, warning stats, loss figure gradients
+- Updated SolutionSection Step 3 to emerald (success outcome)
+- Updated CTASection corner accents to orange, trust dots to emerald
+- Updated scrollbar to navy/blue
+- Updated hardcoded rgba values in HeroSection (grid) to royal blue
+- Verified build compiles successfully with zero errors
+
+Stage Summary:
+- Full palette swap complete: Dark Red → Navy Blue + Orange Trust-Urgency Framework
+- All 3 critical rules enforced across every component
+- 10-color system fully implemented with semantic naming
+- Build clean, zero errors

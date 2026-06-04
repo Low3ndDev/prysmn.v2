@@ -10,10 +10,9 @@ const steps = [
     title: 'A customer calls',
     description:
       "You're on a job and can't answer. The phone rings out — but instead of losing the lead, the system takes over.",
-    color: 'text-prysmn-400',
+    color: 'text-prysmn-600',
     bgColor: 'bg-prysmn-600/20',
-    borderColor: 'border-prysmn-500/30',
-    connectorColor: 'from-prysmn-500/40',
+    borderColor: 'border-prysmn-600/30',
   },
   {
     step: 2,
@@ -21,10 +20,9 @@ const steps = [
     title: 'Auto-text within 15 seconds',
     description:
       'They instantly get: "Hi, this is [Your Business]. Sorry we missed your call! Do you need a plumber? Reply YES and we\'ll call you right back."',
-    color: 'text-prysmn-300',
+    color: 'text-prysmn-500',
     bgColor: 'bg-prysmn-500/20',
-    borderColor: 'border-prysmn-400/30',
-    connectorColor: 'from-prysmn-400/40',
+    borderColor: 'border-prysmn-500/30',
   },
   {
     step: 3,
@@ -32,18 +30,17 @@ const steps = [
     title: 'They reply. Job booked.',
     description:
       "They reply YES. You call back between jobs. The job is booked. That's a customer you would have lost — now it's revenue in your pocket.",
-    color: 'text-prysmn-200',
-    bgColor: 'bg-prysmn-400/20',
-    borderColor: 'border-prysmn-300/30',
-    connectorColor: '',
+    color: 'text-prysmn-emerald',
+    bgColor: 'bg-prysmn-emerald/20',
+    borderColor: 'border-prysmn-emerald/30',
   },
 ]
 
 export default function SolutionSection() {
   return (
     <section id="solution" aria-labelledby="solution-heading" className="relative bg-prysmn-950 py-20 sm:py-28">
-      {/* Top border glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-500/50 to-transparent" />
+      {/* Top border glow — Trust Zone (Blue) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-600/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -97,7 +94,7 @@ export default function SolutionSection() {
               {/* Connector line between steps */}
               {index < steps.length - 1 && (
                 <div className="flex justify-center py-2">
-                  <div className="w-px h-6 bg-gradient-to-b from-prysmn-500/30 to-transparent" />
+                  <div className="w-px h-6 bg-gradient-to-b from-prysmn-600/30 to-transparent" />
                 </div>
               )}
             </motion.div>

@@ -21,17 +21,17 @@ const testimonials = [
 ]
 
 const industryStats = [
-  { value: '85%', label: 'of missed callers respond to the auto-text' },
-  { value: '72%', label: 'of text-back conversations convert to booked jobs' },
-  { value: '$14,560', label: 'average revenue recovery per year' },
-  { value: '+0.7', label: 'stars improvement within 60 days' },
+  { value: '85%', label: 'of missed callers respond to the auto-text', color: 'from-prysmn-400 to-prysmn-300' },
+  { value: '72%', label: 'of text-back conversations convert to booked jobs', color: 'from-prysmn-400 to-prysmn-300' },
+  { value: '$14,560', label: 'average revenue recovery per year', color: 'from-prysmn-emerald to-emerald-400' },
+  { value: '+0.7', label: 'stars improvement within 60 days', color: 'from-prysmn-amber to-amber-400' },
 ]
 
 export default function SocialProofSection() {
   return (
     <section id="proof" aria-labelledby="proof-heading" className="relative bg-prysmn-950 py-20 sm:py-28">
-      {/* Top border glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-500/50 to-transparent" />
+      {/* Top border glow — Trust Zone (Blue) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-prysmn-600/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -65,14 +65,14 @@ export default function SocialProofSection() {
               className="relative p-6 sm:p-8 rounded-2xl bg-prysmn-900/40 border border-prysmn-700/20 backdrop-blur-sm"
             >
               {/* Quote icon */}
-              <Quote className="w-10 h-10 text-prysmn-600/30 mb-4" />
+              <Quote className="w-10 h-10 text-prysmn-700/30 mb-4" />
 
               <blockquote className="text-prysmn-200/90 leading-relaxed text-base sm:text-lg">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
               <div className="mt-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-prysmn-500 to-prysmn-700 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-prysmn-600 to-prysmn-800 flex items-center justify-center shrink-0">
                   <span className="text-white text-xs font-bold">{testimonial.initials}</span>
                 </div>
                 <div>
@@ -84,14 +84,14 @@ export default function SocialProofSection() {
               {/* Star rating */}
               <div className="mt-3 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-4 h-4 fill-prysmn-amber text-prysmn-amber" />
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Industry Average Results */}
+        {/* Industry Average Results — Color-coded by meaning */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function SocialProofSection() {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="text-center p-4 rounded-xl bg-prysmn-900/30 border border-prysmn-700/15"
               >
-                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-prysmn-400 to-prysmn-300 bg-clip-text text-transparent">
+                <p className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                   {stat.value}
                 </p>
                 <p className="text-prysmn-300/50 text-xs sm:text-sm mt-1">{stat.label}</p>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { PhoneCall, Star, Kanban, CalendarCheck, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { PhoneCall, Star, Kanban, CalendarCheck, CheckCircle2 } from 'lucide-react'
 
 const services = [
   {
@@ -9,9 +9,9 @@ const services = [
     title: 'Missed Call Text-Back',
     description:
       'Auto-text within 15 seconds of any missed call. Converts 85% of missed callers into conversations. Recovers an average of $14,560 per year in previously lost revenue.',
-    gradient: 'from-prysmn-500 to-prysmn-700',
+    gradient: 'from-prysmn-600 to-prysmn-800',
     iconBg: 'bg-prysmn-600/20',
-    iconColor: 'text-prysmn-400',
+    iconColor: 'text-prysmn-600',
   },
   {
     icon: Star,
@@ -27,9 +27,9 @@ const services = [
     title: 'Basic CRM Pipeline',
     description:
       'Track every lead, quote, and job in one simple dashboard. Never lose track of a pending quote again. Automatic follow-up reminders ensure no opportunity falls through the cracks.',
-    gradient: 'from-emerald-500 to-teal-600',
-    iconBg: 'bg-emerald-600/20',
-    iconColor: 'text-emerald-400',
+    gradient: 'from-prysmn-emerald to-teal-600',
+    iconBg: 'bg-prysmn-emerald/20',
+    iconColor: 'text-prysmn-emerald',
   },
   {
     icon: CalendarCheck,
@@ -51,9 +51,9 @@ const trustPoints = [
 export default function IncludedSection() {
   return (
     <section id="services" aria-labelledby="services-heading" className="relative bg-prysmn-900/30 py-20 sm:py-28">
-      {/* Background texture */}
+      {/* Background texture — Blue grid */}
       <div className="absolute inset-0 opacity-[0.02]" aria-hidden="true" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(176,53,53,0.5) 1px, transparent 0)`,
+        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(37,99,235,0.5) 1px, transparent 0)`,
         backgroundSize: '40px 40px',
       }} />
 
@@ -108,7 +108,7 @@ export default function IncludedSection() {
           ))}
         </div>
 
-        {/* Pricing summary */}
+        {/* Pricing summary — Revenue in EMERALD (Rule: Emerald = money recovered) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,13 +124,13 @@ export default function IncludedSection() {
             <div className="hidden sm:block w-px h-10 bg-prysmn-700/30" />
             <div>
               <p className="text-prysmn-400/50 text-sm">Your return</p>
-              <p className="text-prysmn-200 font-bold text-2xl">$58,240<span className="text-prysmn-400/60 text-base font-normal">/yr in recovered revenue</span></p>
+              <p className="text-prysmn-emerald font-bold text-2xl">$58,240<span className="text-prysmn-400/60 text-base font-normal">/yr in recovered revenue</span></p>
             </div>
           </div>
           <div className="mt-4 flex items-center justify-center gap-4 text-sm text-prysmn-400/50">
             {trustPoints.map((point) => (
               <span key={point} className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-green-400/60" />
+                <CheckCircle2 className="w-4 h-4 text-prysmn-emerald/60" />
                 {point}
               </span>
             ))}

@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#home" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-prysmn-400 to-prysmn-600 flex items-center justify-center shadow-lg shadow-prysmn-600/20">
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-prysmn-600 to-prysmn-900 flex items-center justify-center shadow-lg shadow-prysmn-600/20">
                 <span className="text-white font-bold text-lg">P</span>
               </div>
               <span className="text-white font-bold text-xl tracking-tight">Prysmn</span>
@@ -87,9 +87,10 @@ export default function Footer() {
             <p className="text-prysmn-400/50 text-sm mb-4">
               Stop losing leads today. Book a free 15-minute call.
             </p>
+            {/* CTA Button — ORANGE (Rule 1: CTAs = Orange) */}
             <a
               href="#cta"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-prysmn-500 to-prysmn-600 text-white text-sm font-medium hover:from-prysmn-400 hover:to-prysmn-500 transition-all shadow-lg shadow-prysmn-600/20"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-prysmn-orange hover:bg-prysmn-orange-hover text-white text-sm font-medium transition-all shadow-lg shadow-prysmn-orange/20"
             >
               <Phone className="w-4 h-4" />
               Book a Call

@@ -92,7 +92,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group" aria-label="Prysmn — Home">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-prysmn-400 to-prysmn-600 flex items-center justify-center shadow-lg shadow-prysmn-600/30 group-hover:shadow-prysmn-500/50 transition-shadow">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-prysmn-600 to-prysmn-900 flex items-center justify-center shadow-lg shadow-prysmn-600/30 group-hover:shadow-prysmn-500/50 transition-shadow">
               <span className="text-white font-bold text-lg sm:text-xl">P</span>
             </div>
             <span className="text-white font-bold text-xl sm:text-2xl tracking-tight">
@@ -113,11 +113,11 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA — ORANGE (Rule 1: CTAs = Orange) */}
           <div className="hidden md:flex items-center gap-3">
             <Button
               asChild
-              className="bg-gradient-to-r from-prysmn-500 to-prysmn-600 hover:from-prysmn-400 hover:to-prysmn-500 text-white shadow-lg shadow-prysmn-600/25 hover:shadow-prysmn-500/40 transition-all"
+              className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white shadow-lg shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
             >
               <a href="#cta">
                 <Phone className="w-4 h-4 mr-2" />
@@ -164,9 +164,10 @@ export default function Header() {
                 </a>
               ))}
               <div className="pt-3">
+                {/* Mobile CTA — ORANGE */}
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-prysmn-500 to-prysmn-600 hover:from-prysmn-400 hover:to-prysmn-500 text-white"
+                  className="w-full bg-prysmn-orange hover:bg-prysmn-orange-hover text-white"
                 >
                   <a href="#cta" onClick={closeMobile}>
                     <Phone className="w-4 h-4 mr-2" />
