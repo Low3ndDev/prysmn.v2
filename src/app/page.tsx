@@ -4,6 +4,7 @@ import ProblemSection from '@/components/sections/ProblemSection'
 import SolutionSection from '@/components/sections/SolutionSection'
 import IncludedSection from '@/components/sections/IncludedSection'
 import SocialProofSection from '@/components/sections/SocialProofSection'
+import AboutSection from '@/components/sections/AboutSection'
 import FAQSection from '@/components/sections/FAQSection'
 import CTASection from '@/components/sections/CTASection'
 import Footer from '@/components/sections/Footer'
@@ -18,6 +19,7 @@ export default function Home() {
         <SolutionSection />
         <IncludedSection />
         <SocialProofSection />
+        <AboutSection />
         <FAQSection />
         <CTASection />
       </main>

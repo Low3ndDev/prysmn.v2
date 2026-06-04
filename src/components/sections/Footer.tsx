@@ -12,6 +12,7 @@ const footerLinks = {
     { label: 'The Problem', href: '#problem' },
     { label: 'Solution', href: '#solution' },
     { label: 'Proof', href: '#proof' },
+    { label: 'About', href: '#about' },
     { label: 'FAQ', href: '#faq' },
   ],
 }
