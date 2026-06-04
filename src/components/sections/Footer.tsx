@@ -97,11 +97,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Prysmn. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            {/* TODO: Replace #home with actual privacy/terms pages when created */}
-            <a href="#home" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors" aria-label="Privacy Policy — coming soon">
+            <a href="/privacy" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors">
               Privacy Policy
             </a>
-            <a href="#home" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors" aria-label="Terms of Service — coming soon">
+            <a href="/terms" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors">
               Terms of Service
             </a>
           </div>
