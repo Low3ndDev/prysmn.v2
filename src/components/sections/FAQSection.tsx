@@ -47,7 +47,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: { faq: typeof faqs[0]; index:
         aria-expanded={isOpen}
         aria-controls={panelId}
       >
-        <span className="text-prysmn-charcoal font-semibold text-base sm:text-lg">{faq.question}</span>
+        <h3 id={`faq-heading-${index}`} className="text-prysmn-charcoal font-semibold text-base sm:text-lg">{faq.question}</h3>
         <ChevronDown
           className={`w-5 h-5 text-prysmn-amber shrink-0 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
@@ -59,6 +59,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: { faq: typeof faqs[0]; index:
           <motion.div
             id={panelId}
             role="region"
+            aria-labelledby={`faq-heading-${index}`}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

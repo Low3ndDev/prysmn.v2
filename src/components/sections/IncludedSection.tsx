@@ -12,7 +12,7 @@ const services = [
     gradient: 'from-prysmn-600 to-prysmn-800',
     iconBg: 'bg-prysmn-600/10',
     iconColor: 'text-prysmn-600',
-    borderColor: 'border-prysmn-200 hover:border-prysmn-300',
+    borderColor: 'border-prysmn-300/60 hover:border-prysmn-400',
   },
   {
     icon: Star,
@@ -125,14 +125,14 @@ export default function IncludedSection() {
               <p className="text-prysmn-emerald font-bold text-2xl">$58,240<span className="text-gray-400 text-base font-normal">/yr in recovered revenue</span></p>
             </div>
           </div>
-          <div className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-500">
+          <ul className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-500 list-none p-0 m-0">
             {trustPoints.map((point) => (
-              <span key={point} className="flex items-center gap-1.5">
+              <li key={point} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-prysmn-emerald" />
                 {point}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </motion.div>
       </div>
     </section>

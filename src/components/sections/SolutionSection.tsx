@@ -12,7 +12,7 @@ const steps = [
       "You're on a job and can't answer. The phone rings out — but instead of losing the lead, the system takes over.",
     color: 'text-prysmn-600',
     bgColor: 'bg-prysmn-600/10',
-    borderColor: 'border-prysmn-200 hover:border-prysmn-300',
+    borderColor: 'border-prysmn-300/60 hover:border-prysmn-400',
   },
   {
     step: 2,
@@ -22,7 +22,7 @@ const steps = [
       'They instantly get: "Hi, this is [Your Business]. Sorry we missed your call! Do you need a plumber? Reply YES and we\'ll call you right back."',
     color: 'text-prysmn-500',
     bgColor: 'bg-prysmn-500/10',
-    borderColor: 'border-prysmn-200 hover:border-prysmn-300',
+    borderColor: 'border-prysmn-300/60 hover:border-prysmn-400',
   },
   {
     step: 3,

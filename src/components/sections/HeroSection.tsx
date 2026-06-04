@@ -34,13 +34,13 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-prysmn-800/40 border border-prysmn-600/30 mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-prysmn-orange animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-prysmn-orange" />
             <span className="text-prysmn-300 text-sm font-medium">
               Built for Plumbing Businesses
             </span>
           </motion.div>
 
-          {/* Main Headline — $700/Week in Red (loss figure, Rule 2) */}
+          {/* Main Headline — $700/Week in Orange/Amber (loss figure, per report heatmap) */}
           <motion.h1
             id="hero-heading"
             initial={{ opacity: 0, y: 30 }}

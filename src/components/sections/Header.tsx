@@ -19,6 +19,11 @@ export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const tickingRef = useRef(false)
 
+  // Initialize scroll state on mount (handles page refresh mid-scroll)
+  useEffect(() => {
+    setIsScrolled(window.scrollY > 20)
+  }, [])
+
   // Throttled scroll handler using rAF
   useEffect(() => {
     const handleScroll = () => {

@@ -69,17 +69,16 @@ export default function SocialProofSection() {
 
               <blockquote className="text-prysmn-charcoal leading-relaxed text-base sm:text-lg">
                 &ldquo;{testimonial.quote}&rdquo;
+                <footer className="mt-6 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-prysmn-600 to-prysmn-800 flex items-center justify-center shrink-0">
+                    <span className="text-white text-xs font-bold">{testimonial.initials}</span>
+                  </div>
+                  <div>
+                    <cite className="not-italic text-prysmn-charcoal font-semibold text-sm">{testimonial.name}</cite>
+                    <p className="text-gray-500 text-xs">{testimonial.role}</p>
+                  </div>
+                </footer>
               </blockquote>
-
-              <div className="mt-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-prysmn-600 to-prysmn-800 flex items-center justify-center shrink-0">
-                  <span className="text-white text-xs font-bold">{testimonial.initials}</span>
-                </div>
-                <div>
-                  <p className="text-prysmn-charcoal font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-gray-500 text-xs">{testimonial.role}</p>
-                </div>
-              </div>
 
               {/* Star rating */}
               <div className="mt-3 flex gap-0.5" aria-label="5 out of 5 stars">
