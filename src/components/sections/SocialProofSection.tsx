@@ -112,7 +112,7 @@ export default function SocialProofSection() {
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               We&apos;re currently onboarding our first group of Australian plumbing businesses.
-              Founding clients get priority setup, direct access to our team, and locked-in pricing.
+              Founding clients get priority setup, direct access to me, and locked-in pricing.
             </p>
             <p className="text-prysmn-orange font-semibold text-sm">
               Limited spots remaining.

@@ -94,6 +94,28 @@ export default function AboutSection() {
                     I&apos;m currently taking on my first clients. If you want to be one of them,
                     you&apos;ll get my full attention and a system that&apos;s set up in 48 hours.
                   </p>
+
+                  {/* Trust bullets */}
+                  <ul className="space-y-3 pt-2">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-prysmn-emerald/10 flex items-center justify-center">
+                        <span className="text-prysmn-emerald text-xs font-bold">&#10003;</span>
+                      </span>
+                      <span>One point of contact — me, directly. No account managers, no ticket systems.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-prysmn-emerald/10 flex items-center justify-center">
+                        <span className="text-prysmn-emerald text-xs font-bold">&#10003;</span>
+                      </span>
+                      <span>Set up in 48 hours or you don&apos;t pay.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-prysmn-emerald/10 flex items-center justify-center">
+                        <span className="text-prysmn-emerald text-xs font-bold">&#10003;</span>
+                      </span>
+                      <span>No lock-in contracts. If it doesn&apos;t work, cancel anytime.</span>
+                    </li>
+                  </ul>
                 </div>
 
                 {/* CTA */}

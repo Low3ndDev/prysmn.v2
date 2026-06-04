@@ -8,7 +8,7 @@ const faqs = [
   {
     question: 'How fast can this be set up?',
     answer:
-      "30 minutes. We configure everything on your existing business phone number. No new hardware, no apps to install, no IT knowledge required. You literally don't have to do anything — we handle the entire setup while you're working. Most plumbers see their first auto-text go out within an hour of signing up.",
+      "30 minutes. I configure everything on your existing business phone number. No new hardware, no apps to install, no IT knowledge required. You literally don't have to do anything — I handle the entire setup while you're working. Most plumbers see their first auto-text go out within an hour of signing up.",
   },
   {
     question: 'Do I need a new phone number?',
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'What\'s the catch with $497/month?',
     answer:
-      "No catch. No hidden fees, no contracts, no lock-in period. The reason it's $497 and not $1,500 is that our technology runs on automation — it costs us very little to deliver, and we pass those savings on. Cancel anytime if you're not seeing results.",
+      "No catch. No hidden fees, no contracts, no lock-in period. The reason it's $497 and not $1,500 is that the technology runs on automation — it costs very little to deliver, and I pass those savings on to you. Cancel anytime if you're not seeing results.",
   },
   {
     question: 'How is this different from just hiring a receptionist?',
