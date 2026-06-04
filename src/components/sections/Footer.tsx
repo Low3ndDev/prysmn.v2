@@ -1,5 +1,3 @@
-'use client'
-
 import { Mail, MapPin, Phone } from 'lucide-react'
 
 const footerLinks = {
@@ -42,7 +40,7 @@ export default function Footer() {
               </a>
               <span className="text-prysmn-400/50 flex items-center gap-1.5">
                 <MapPin className="w-5 h-5" />
-                <span className="text-xs">United States</span>
+                <span className="text-xs">Australia</span>
               </span>
             </div>
           </div>
@@ -104,10 +102,11 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Prysmn. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#home" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors">
+            {/* TODO: Replace #home with actual privacy/terms pages when created */}
+            <a href="#home" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors" aria-label="Privacy Policy — coming soon">
               Privacy Policy
             </a>
-            <a href="#home" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors">
+            <a href="#home" className="text-prysmn-400/40 hover:text-prysmn-400 text-xs transition-colors" aria-label="Terms of Service — coming soon">
               Terms of Service
             </a>
           </div>

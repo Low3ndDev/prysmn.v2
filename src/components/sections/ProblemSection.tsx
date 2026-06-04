@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 import { PhoneOff, DollarSign, Users } from 'lucide-react'
 
-function AnimatedCounter({ end, prefix = '', suffix = '', duration = 2 }: { end: number; prefix?: string; suffix?: string; duration?: number }) {
+function AnimatedCounter({ end, prefix = '', suffix = '', duration = 2, decimals = 0 }: { end: number; prefix?: string; suffix?: string; duration?: number; decimals?: number }) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
@@ -18,18 +18,19 @@ function AnimatedCounter({ end, prefix = '', suffix = '', duration = 2 }: { end:
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / (duration * 1000), 1)
       const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.floor(eased * end))
+      const current = eased * end
+      setCount(decimals > 0 ? parseFloat(current.toFixed(decimals)) : Math.floor(current))
       if (progress < 1) {
         animationId = requestAnimationFrame(animate)
       }
     }
     animationId = requestAnimationFrame(animate)
     return () => cancelAnimationFrame(animationId)
-  }, [isInView, end, duration])
+  }, [isInView, end, duration, decimals])
 
   return (
     <span ref={ref}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {prefix}{count.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}{suffix}
     </span>
   )
 }
@@ -39,6 +40,7 @@ const painStats = [
     icon: PhoneOff,
     value: 62,
     suffix: '%',
+    decimals: 0,
     label: 'of missed callers never call back',
     description: 'They just move on to the next plumber on Google.',
     iconColor: 'text-red-500',
@@ -51,6 +53,7 @@ const painStats = [
     value: 36400,
     prefix: '$',
     suffix: '',
+    decimals: 0,
     label: 'lost to missed calls every year',
     description: "That's $700 a week walking straight to your competition.",
     iconColor: 'text-prysmn-amber',
@@ -60,8 +63,9 @@ const painStats = [
   },
   {
     icon: Users,
-    value: 4,
-    suffix: '.3',
+    value: 43,
+    suffix: '',
+    decimals: 1,
     label: 'customers lost PER DAY to competitors',
     description: 'Competitors who simply answer the phone get your jobs.',
     iconColor: 'text-red-500',
@@ -117,7 +121,7 @@ export default function ProblemSection() {
                 <stat.icon className={`w-7 h-7 ${stat.iconColor}`} />
               </div>
               <div className={`text-5xl sm:text-6xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}>
-                <AnimatedCounter end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                <AnimatedCounter end={stat.value} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
               </div>
               <p className="text-prysmn-charcoal font-semibold mt-2 text-lg">{stat.label}</p>
               <p className="text-gray-500 text-sm mt-2">{stat.description}</p>

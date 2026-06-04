@@ -82,9 +82,9 @@ export default function SocialProofSection() {
               </div>
 
               {/* Star rating */}
-              <div className="mt-3 flex gap-0.5">
+              <div className="mt-3 flex gap-0.5" aria-label="5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-prysmn-amber text-prysmn-amber" />
+                  <Star key={i} className="w-4 h-4 fill-prysmn-amber text-prysmn-amber" aria-hidden="true" />
                 ))}
               </div>
             </motion.div>

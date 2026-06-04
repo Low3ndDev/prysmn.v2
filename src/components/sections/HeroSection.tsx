@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function HeroSection() {
@@ -49,7 +49,7 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight"
           >
             Stop Losing{' '}
-            <span className="bg-gradient-to-r from-red-400 via-prysmn-amber to-red-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-prysmn-orange via-prysmn-amber to-prysmn-orange bg-clip-text text-transparent">
               $700/Week
             </span>{' '}
             to Missed Calls
@@ -131,8 +131,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-prysmn-950 to-transparent" />
+      {/* Bottom gradient fade — smooth transition to white Problem section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-prysmn-snow via-prysmn-950/80 to-transparent" />
     </section>
   )
 }

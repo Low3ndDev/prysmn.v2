@@ -1,5 +1,3 @@
-'use client'
-
 import Header from '@/components/sections/Header'
 import HeroSection from '@/components/sections/HeroSection'
 import ProblemSection from '@/components/sections/ProblemSection'
@@ -14,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <HeroSection />
         <ProblemSection />
         <SolutionSection />

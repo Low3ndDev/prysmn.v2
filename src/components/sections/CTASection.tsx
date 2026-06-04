@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button'
 export default function CTASection() {
   return (
     <section id="cta" aria-labelledby="cta-heading" className="relative bg-prysmn-950 py-20 sm:py-28 overflow-hidden">
+      {/* Top gradient fade — smooth transition from white FAQ section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-prysmn-snow via-prysmn-950/80 to-transparent" />
+
       {/* Background effects — Trust Zone (Blue) */}
       <div className="absolute inset-0" aria-hidden="true">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-prysmn-600/15 rounded-full blur-3xl" />
@@ -32,7 +35,7 @@ export default function CTASection() {
 
             <h2 id="cta-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
               Stop Losing{' '}
-              <span className="bg-gradient-to-r from-red-400 via-prysmn-amber to-red-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-prysmn-orange via-prysmn-amber to-prysmn-orange bg-clip-text text-transparent">
                 $700/Week.
               </span>{' '}
               Start Recovering It Today.

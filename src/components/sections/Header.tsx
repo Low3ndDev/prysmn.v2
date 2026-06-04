@@ -88,6 +88,13 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
+      {/* Skip to content — accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-prysmn-orange focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+      >
+        Skip to main content
+      </a>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
@@ -129,7 +136,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+            className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
             aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileOpen}
             aria-controls="mobile-menu"
@@ -148,7 +155,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-prysmn-950/98 backdrop-blur-lg border-t border-prysmn-800/50"
+            className="lg:hidden bg-prysmn-950/98 backdrop-blur-lg border-t border-prysmn-800/50"
             role="navigation"
             aria-label="Mobile navigation"
           >

@@ -37,13 +37,15 @@ const faqs = [
   },
 ]
 
-function FAQItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boolean; onToggle: () => void }) {
+function FAQItem({ faq, index, isOpen, onToggle }: { faq: typeof faqs[0]; index: number; isOpen: boolean; onToggle: () => void }) {
+  const panelId = `faq-panel-${index}`
   return (
     <div className="border border-gray-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors bg-white">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between p-5 sm:p-6 text-left gap-4"
         aria-expanded={isOpen}
+        aria-controls={panelId}
       >
         <span className="text-prysmn-charcoal font-semibold text-base sm:text-lg">{faq.question}</span>
         <ChevronDown
@@ -55,6 +57,8 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boole
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
+            id={panelId}
+            role="region"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -110,6 +114,7 @@ export default function FAQSection() {
             <FAQItem
               key={faq.question}
               faq={faq}
+              index={index}
               isOpen={openIndex === index}
               onToggle={() => setOpenIndex(openIndex === index ? null : index)}
             />
