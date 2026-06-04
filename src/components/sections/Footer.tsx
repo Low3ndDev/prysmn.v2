@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
+import { businessConfig } from '@/lib/business-config'
 
 const footerLinks = {
   services: [
@@ -32,10 +33,10 @@ export default function Footer() {
               The Plumber&apos;s Lifeline Package — automated lead capture and follow-up built exclusively for plumbing businesses.
             </p>
             <div className="mt-4 flex items-center gap-4">
-              <a href="mailto:hello@prysmn.com" className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Email">
+              <a href={`mailto:${businessConfig.email}`} className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Email">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="tel:+1234567890" className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Phone">
+              <a href={businessConfig.phoneHref} className="text-prysmn-400/50 hover:text-prysmn-400 transition-colors" aria-label="Phone">
                 <Phone className="w-5 h-5" />
               </a>
               <span className="text-prysmn-400/50 flex items-center gap-1.5">

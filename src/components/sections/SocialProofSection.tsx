@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Star, Quote } from 'lucide-react'
+import { Star } from 'lucide-react'
 
 const testimonials = [
   {
@@ -64,8 +64,12 @@ export default function SocialProofSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative p-6 sm:p-8 rounded-2xl bg-white border border-amber-100 shadow-sm"
             >
-              {/* Quote icon */}
-              <Quote className="w-10 h-10 text-amber-200 mb-4" />
+              {/* Star rating — at top for immediate credibility signal */}
+              <div className="flex gap-0.5 mb-4" aria-label="5 out of 5 stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-prysmn-amber text-prysmn-amber" aria-hidden="true" />
+                ))}
+              </div>
 
               <blockquote className="text-prysmn-charcoal leading-relaxed text-base sm:text-lg">
                 &ldquo;{testimonial.quote}&rdquo;
@@ -79,13 +83,6 @@ export default function SocialProofSection() {
                   </div>
                 </footer>
               </blockquote>
-
-              {/* Star rating */}
-              <div className="mt-3 flex gap-0.5" aria-label="5 out of 5 stars">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-prysmn-amber text-prysmn-amber" aria-hidden="true" />
-                ))}
-              </div>
             </motion.div>
           ))}
         </div>

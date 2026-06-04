@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { businessConfig } from '@/lib/business-config'
 
 export default function CTASection() {
   return (
@@ -54,7 +55,7 @@ export default function CTASection() {
                 size="lg"
                 className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white text-lg px-8 py-6 shadow-xl shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
               >
-                <a href="tel:+1234567890">
+                <a href={businessConfig.phoneHref}>
                   <Phone className="w-5 h-5 mr-2" />
                   Book Your Free 15-Minute Call
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -65,8 +66,8 @@ export default function CTASection() {
             {/* Direct phone line */}
             <p className="mt-6 text-prysmn-400/50 text-sm">
               Or call us directly:{' '}
-              <a href="tel:+1234567890" className="text-prysmn-300 hover:text-white transition-colors underline underline-offset-2">
-                (123) 456-7890
+              <a href={businessConfig.phoneHref} className="text-prysmn-300 hover:text-white transition-colors underline underline-offset-2">
+                {businessConfig.phoneDisplay}
               </a>
             </p>
 

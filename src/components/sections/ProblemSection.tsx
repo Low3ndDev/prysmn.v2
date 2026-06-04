@@ -63,10 +63,10 @@ const painStats = [
   },
   {
     icon: Users,
-    value: 43,
-    suffix: '',
+    value: 3.5,
+    suffix: '+',
     decimals: 1,
-    label: 'customers lost PER DAY to competitors',
+    label: 'booked jobs lost per week to competitors',
     description: 'Competitors who simply answer the phone get your jobs.',
     iconColor: 'text-red-500',
     bgColor: 'bg-red-50',

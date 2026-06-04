@@ -18,17 +18,18 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const tickingRef = useRef(false)
+  const rafIdRef = useRef<number>(0)
 
   // Initialize scroll state on mount (handles page refresh mid-scroll)
   useEffect(() => {
     setIsScrolled(window.scrollY > 20)
   }, [])
 
-  // Throttled scroll handler using rAF
+  // Throttled scroll handler using rAF — with proper cleanup
   useEffect(() => {
     const handleScroll = () => {
       if (!tickingRef.current) {
-        requestAnimationFrame(() => {
+        rafIdRef.current = requestAnimationFrame(() => {
           setIsScrolled(window.scrollY > 20)
           tickingRef.current = false
         })
@@ -36,7 +37,10 @@ export default function Header() {
       }
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      cancelAnimationFrame(rafIdRef.current)
+    }
   }, [])
 
   // Close mobile menu on Escape

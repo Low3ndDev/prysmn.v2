@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section
       id="home"
       aria-labelledby="hero-heading"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-prysmn-950"
+      className="relative min-h-screen min-h-dvh flex items-center justify-center overflow-hidden bg-prysmn-950"
     >
       {/* Background Effects — Trust Zone (Blue) */}
       <div className="absolute inset-0" aria-hidden="true">
