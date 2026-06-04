@@ -36,69 +36,80 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <div className="relative p-8 sm:p-10 rounded-2xl bg-white border border-prysmn-200 shadow-sm">
-            {/* Avatar + name row */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
-              <div className="shrink-0">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-prysmn-200 shadow-lg shadow-prysmn-600/10">
+          <div className="rounded-2xl bg-white border border-prysmn-200 shadow-sm overflow-hidden">
+            <div className="flex flex-col lg:flex-row">
+              {/* Photo panel — fills left side on desktop */}
+              <div className="relative w-full lg:w-2/5 shrink-0">
+                <div className="relative w-full aspect-square lg:aspect-auto lg:h-full min-h-[320px] lg:min-h-[520px]">
                   <Image
                     src="/john-avatar.jpg"
                     alt="John — Founder of Prysmn"
-                    width={112}
-                    height={112}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                     priority
                   />
+                  {/* Bottom gradient for name overlay on mobile */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-prysmn-950/80 to-transparent lg:hidden" />
+                  {/* Name overlay on mobile */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 lg:hidden">
+                    <h3 className="text-2xl font-bold text-white">John</h3>
+                    <p className="text-prysmn-300 font-medium text-sm">Founder, Prysmn</p>
+                  </div>
                 </div>
               </div>
-              <div className="text-center sm:text-left">
-                <h3 className="text-2xl sm:text-3xl font-bold text-prysmn-charcoal">
-                  John
-                </h3>
-                <p className="text-prysmn-600 font-medium text-sm mt-1">
-                  Founder, Prysmn
-                </p>
 
+              {/* Content panel */}
+              <div className="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+                {/* Name — desktop only, mobile shows it overlaid on photo */}
+                <div className="hidden lg:block mb-6">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-prysmn-charcoal">
+                    John
+                  </h3>
+                  <p className="text-prysmn-600 font-medium text-sm mt-1">
+                    Founder, Prysmn
+                  </p>
+                </div>
+
+                {/* Body copy */}
+                <div className="space-y-5 text-prysmn-charcoal leading-relaxed">
+                  <p>
+                    I build automation systems specifically for Australian plumbing businesses — not agencies,
+                    not retail, not &ldquo;all trades.&rdquo; Just plumbers.
+                  </p>
+                  <p>
+                    I noticed something: most plumbers are incredible at their trade and terrible at
+                    never missing a lead — not because they don&apos;t care, but because they&apos;re
+                    under a house when the phone rings. The big marketing agencies charge $5,000+ to
+                    sort it out, take three months to deliver, and hand you a generic website that
+                    doesn&apos;t actually fix the problem.
+                  </p>
+                  <p className="text-lg font-medium text-prysmn-charcoal">
+                    So I built Prysmn to do one thing well: make sure every missed call turns into a
+                    booked job — automatically, in 15 seconds, without you touching a thing.
+                  </p>
+                  <p>
+                    I&apos;m currently taking on my first clients. If you want to be one of them,
+                    you&apos;ll get my full attention and a system that&apos;s set up in 48 hours.
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white shadow-lg shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
+                  >
+                    <a href={businessConfig.bookingUrl}>
+                      Book Your Free Strategy Session
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
+                  </Button>
+                </div>
               </div>
-            </div>
-
-            {/* Body copy */}
-            <div className="space-y-5 text-prysmn-charcoal leading-relaxed">
-              <p>
-                I build automation systems specifically for Australian plumbing businesses — not agencies,
-                not retail, not &ldquo;all trades.&rdquo; Just plumbers.
-              </p>
-              <p>
-                I noticed something: most plumbers are incredible at their trade and terrible at
-                never missing a lead — not because they don&apos;t care, but because they&apos;re
-                under a house when the phone rings. The big marketing agencies charge $5,000+ to
-                sort it out, take three months to deliver, and hand you a generic website that
-                doesn&apos;t actually fix the problem.
-              </p>
-              <p className="text-lg font-medium text-prysmn-charcoal">
-                So I built Prysmn to do one thing well: make sure every missed call turns into a
-                booked job — automatically, in 15 seconds, without you touching a thing.
-              </p>
-              <p>
-                I&apos;m currently taking on my first clients. If you want to be one of them,
-                you&apos;ll get my full attention and a system that&apos;s set up in 48 hours.
-              </p>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-8 pt-6 border-t border-gray-100 text-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white shadow-lg shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
-              >
-                <a href={businessConfig.bookingUrl}>
-                  Book Your Free Strategy Session
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </Button>
             </div>
           </div>
         </motion.div>
