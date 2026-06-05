@@ -8,7 +8,7 @@ const faqs = [
   {
     question: 'How fast can this be set up?',
     answer:
-      "30 minutes. I configure everything on your existing business phone number. No new hardware, no apps to install, no IT knowledge required. You literally don't have to do anything — I handle the entire setup while you're working. Most plumbers see their first auto-text go out within an hour of signing up.",
+      "Within 48 hours. I configure everything on your existing business phone number — no new hardware, no apps to install, no IT knowledge required. You literally don't have to do anything. I handle the entire setup while you're working. Most plumbers see their first auto-text go out well before the 48-hour mark.",
   },
   {
     question: 'Do I need a new phone number?',
