@@ -66,7 +66,7 @@ export default function HeroSection() {
               className="bg-prysmn-orange hover:bg-prysmn-orange-hover text-white text-lg px-8 py-6 shadow-xl shadow-prysmn-orange/25 hover:shadow-prysmn-orange/40 transition-all"
             >
               <a href="#cta">
-                Book Your Free Call
+                Book Your Free Strategy Session
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </Button>

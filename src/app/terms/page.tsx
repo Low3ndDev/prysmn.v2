@@ -37,7 +37,7 @@ export default function TermsOfService() {
                 </h2>
                 <p>
                   These Terms govern your use of Prysmn&rsquo;s services. By booking a call or
-                  engaging our services, you agree to these Terms. Prysmn is operated by John Betes.
+                  engaging our services, you agree to these Terms. Prysmn is operated by {businessConfig.founderName}.
                 </p>
               </div>
 

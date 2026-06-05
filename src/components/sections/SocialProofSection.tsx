@@ -99,7 +99,7 @@ export default function SocialProofSection() {
 
         {/* Footnote — calculation basis */}
         <p className="text-center text-gray-400 text-xs mt-8">
-          Based on an average plumbing job value of $320 and 2–3 missed calls per week. Individual results vary.
+          Based on an average plumbing job value of $320 and 2+ missed booked jobs per week. Individual results vary.
         </p>
 
         {/* Founding client CTA — honest scarcity */}
@@ -116,7 +116,7 @@ export default function SocialProofSection() {
               <span className="text-prysmn-charcoal font-semibold text-sm">Founding Client Program</span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
-              We&apos;re currently onboarding our first group of Australian plumbing businesses.
+              I&apos;m currently onboarding founding clients among Australian plumbing businesses.
               Founding clients get priority setup, direct access to me, and locked-in pricing.
             </p>
             <p className="text-prysmn-orange font-semibold text-sm">

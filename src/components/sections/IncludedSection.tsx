@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { PhoneCall, Star, Kanban, CalendarCheck, CheckCircle2 } from 'lucide-react'
+import { businessConfig } from '@/lib/business-config'
 
 const services = [
   {
     icon: PhoneCall,
     title: 'Missed Call Text-Back',
     description:
-      'Auto-text within 15 seconds of any missed call. Converts 85% of missed callers into conversations. Recovers an average of $14,560 per year in previously lost revenue.',
+      `Auto-text within 15 seconds of any missed call. Leads who receive a text are 4x more likely to convert than those sent to voicemail. Recovers an average of $${businessConfig.textBackAnnualRecovery.toLocaleString()} per year in previously lost revenue.`,
     gradient: 'from-prysmn-600 to-prysmn-800',
     iconBg: 'bg-prysmn-600/10',
     iconColor: 'text-prysmn-600',
@@ -49,7 +50,7 @@ const services = [
 const trustPoints = [
   'No contracts',
   'Cancel anytime',
-  'Setup in 30 minutes',
+  'Setup within ' + businessConfig.setupTimeframe,
 ]
 
 export default function IncludedSection() {
@@ -72,7 +73,7 @@ export default function IncludedSection() {
           </h2>
           <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
             Everything you need to stop losing jobs — for just{' '}
-            <span className="text-prysmn-orange font-semibold">$497/month</span>
+            <span className="text-prysmn-orange font-semibold">${businessConfig.priceFormatted}</span>
           </p>
         </motion.div>
 
@@ -117,12 +118,12 @@ export default function IncludedSection() {
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
             <div>
               <p className="text-gray-500 text-sm">Your investment</p>
-              <p className="text-prysmn-orange font-bold text-2xl">$497<span className="text-gray-400 text-base font-normal">/mo</span></p>
+              <p className="text-prysmn-orange font-bold text-2xl">${businessConfig.priceMonthly}<span className="text-gray-400 text-base font-normal">/mo</span></p>
             </div>
             <div className="hidden sm:block w-px h-10 bg-gray-200" />
             <div>
               <p className="text-gray-500 text-sm">Your return</p>
-              <p className="text-prysmn-emerald font-bold text-2xl">$58,240<span className="text-gray-400 text-base font-normal">/yr in recovered revenue</span></p>
+              <p className="text-prysmn-emerald font-bold text-2xl">${businessConfig.annualLoss.toLocaleString()}<span className="text-gray-400 text-base font-normal">/yr in recovered revenue</span></p>
             </div>
           </div>
           <ul className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-500 list-none p-0 m-0">

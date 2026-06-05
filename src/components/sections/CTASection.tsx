@@ -37,14 +37,14 @@ export default function CTASection() {
             <h2 id="cta-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
               Stop Losing{' '}
               <span className="bg-gradient-to-r from-prysmn-orange via-prysmn-amber to-prysmn-orange bg-clip-text text-transparent">
-                $700/Week.
+                ${businessConfig.weeklyLoss}/Week.
               </span>{' '}
               Start Recovering It Today.
             </h2>
 
             <p className="mt-6 text-prysmn-300/80 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
-              Book a free 15-minute strategy session. We&apos;ll show you exactly how many calls
-              you&apos;re missing and have the text-back system running within 48 hours.
+              Book a free 15-minute strategy session. I&apos;ll show you exactly how many calls
+              you&apos;re missing and have the text-back system running within {businessConfig.setupTimeframe}.
               No contracts. No risk. Just results.
             </p>
 
@@ -74,7 +74,7 @@ export default function CTASection() {
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-prysmn-emerald" />
-                Running within 48 hours
+                Running within {businessConfig.setupTimeframe}
               </span>
             </div>
           </div>

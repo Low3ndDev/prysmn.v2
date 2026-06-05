@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
                 </h2>
                 <p>
                   Prysmn is a digital automation service built for Australian plumbing businesses.
-                  We are operated by John Betes (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;).
+                  We are operated by {businessConfig.founderName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;).
                 </p>
               </div>
 
